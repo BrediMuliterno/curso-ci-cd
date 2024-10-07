@@ -25,4 +25,4 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: bredimuliterno/go_ci:${{ github.ref+name }}
+        tags: bredimuliterno/go_ci:${{github.ref+name}}
