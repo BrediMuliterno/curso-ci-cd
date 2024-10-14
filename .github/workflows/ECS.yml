@@ -18,6 +18,9 @@ jobs:
     - name: Obter arquivo da tarefa
       run: aws ecs describe-task-definition --task-definition Tarefa_API-Go --query taskDefinition > task-definition.json
 
+    - name: Copia do task-definition
+      run: cp task-definition.json task-definition.old
+
     - name: Fill in the new image ID in the Amazon ECS task definition
       id: task-def
       uses: aws-actions/amazon-ecs-render-task-definition@v1
